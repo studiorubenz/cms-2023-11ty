@@ -1,0 +1,42 @@
+$desktop-factor: 0.75;
+
+// MAX-WIDTH CONTAINER SIZE
+$max-width: 1920;
+
+// PADDINGS
+$pm: 1rem;
+$pd: 2.1rem;
+
+
+// BLOCKPADDINGS
+$bpm: 4rem;
+$bpd: calc(8rem * $desktop-factor);
+
+
+// BREAKPOINTS
+$mobile: 899;
+$desktop: $mobile + 1;
+
+
+$fontsm: rem(16);
+$fontsm-7: rem(38);
+$fontsm-6: rem(28);
+$fontsm-5: rem(22);
+
+$fontsd: rem(22 * $desktop-factor);
+$fontsd-7: rem(68 * $desktop-factor);
+$fontsd-6: rem(68 * $desktop-factor);
+$fontsd-5: rem(38 * $desktop-factor);
+
+
+// COLORS
+$bggray: hsl(0, 0%, 21%, 100%);
+$gray-35: hsl(0, 0%, 35%, 100%);
+$gray-84: hsl(0, 0%, 84%, 100%);
+$gray-97: hsl(0, 0%, 97%, 1);
+
+$primary: hsl(25, 63%, 57%, 100%);
+$primary-medium: hsla(26, 100%, 72%, 1);
+$primary-light: hsla(23, 100%, 97%, 1);
+
+

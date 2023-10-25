@@ -1,0 +1,234 @@
+#workshops {
+  div.level {
+    .icon img {
+      margin: 0 auto;
+      border-bottom: 4px;
+      display: block;
+      background-color: $gray-35;
+      clip-path: circle(43%);
+      z-index: 2;
+    }
+  }
+}
+
+@include breakpoint(0, $mobile) {
+  #workshops {
+    padding: $bpm $pm;
+
+    div.level {
+      position: relative;
+      top: 1rem;
+      margin: 4rem 0 6rem;
+      padding: $pm $pm 2.4rem $pm;
+      color: white;
+      width: 100%;
+      background-color: $bggray;
+
+      &:nth-of-type(1) {
+        margin-top: 6rem !important;
+      }
+
+      &:last-of-type {
+        margin-bottom: 2.5 * $pm;
+      }
+
+      .icon img {
+        position: absolute;
+        padding: 2rem;
+        width: rem(130);
+        height: rem(130);
+        left: 0;
+        right: 0;
+        top: -4rem;
+      }
+
+      div.number p {
+        display: inline-block;
+        width: 2.2rem;
+        height: 2.2rem;
+        position: absolute;
+        top: -4.2rem;
+        left: 50%;
+        right: 0;
+        font-size: $fontsm-6;
+        text-align: center;
+        background-color: $gray-84;
+        border-radius: 50%;
+        font-weight: 600;
+        color: $primary;
+        margin-left: rem(30);
+        padding-top: 3px;
+        line-height: 1;
+      }
+
+      h3 {
+        margin-top: 4rem;
+      }
+
+      div.quote {
+        img {
+          margin: 2.25rem auto .25rem auto;
+          display: block;
+          width: 64px;
+          height: auto;
+        }
+
+        blockquote {
+          text-align: center;
+          font-size: $fontsm-5;
+        }
+      }
+    }
+  }
+}
+
+
+@include breakpoint($desktop) {
+  #workshops {
+    padding: $bpd $pd;
+    max-width: rem($max-width);
+    margin: 0 auto;
+
+    .grid {
+      margin-top: 1.8 * $pd;
+    }
+
+    .level {
+      display: grid;
+      grid-template-rows: repeat(3, auto);
+      background-color: $bggray;
+      max-width: 80rem;
+
+      &:nth-of-type(1) {
+        margin-left: 10%;
+      }
+
+      &:nth-of-type(2) {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+
+      &:nth-of-type(3) {
+        margin-right: 10%;
+      }
+
+      & + .level {
+        margin-top: $pd;
+      }
+
+      & > * {
+        grid-row: 1 / 2;
+        padding: calc($pd);
+      }
+
+      div.number {
+        grid-column: 1 / 2;
+        display: flex;
+        font-size: rem(300);
+        font-weight: 600;
+        color: $bggray;
+        padding: 0;
+        background-color: white;
+        p {
+          line-height: .6;
+          padding-bottom: 10px;
+          margin-right: -25px;
+        }
+      }
+
+      .copy {
+        color: white;
+      }
+
+      .icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 !important;
+        clip-path: circle(50%);
+
+        img {
+          width: 100%;
+          min-width: 12rem;
+          height: auto;
+          padding: 25%;
+        }
+      }
+
+      .quote {
+        position: relative;
+        font-size: $fontsd-5;
+        color: white;
+        line-height: 1.2;
+
+        img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 40%;
+          height: auto;
+        }
+      }
+    }
+
+    .level:nth-of-type(1) {
+      div.number p {
+        align-self: flex-start;
+      }
+
+      .copy {
+        grid-column: 2 / 4;
+      }
+
+      .icon {
+        grid-column: 4 / 5;
+      }
+    }
+
+    .level:nth-of-type(2) {
+      div.number p {
+        align-self: center;
+      }
+
+      .quote {
+        grid-column: 2 / 3;
+        display: flex;
+        align-items: flex-end;
+        img {
+          top: 0;
+          bottom: auto;
+        }
+      }
+
+      .copy {
+        grid-column: 4 / 6;
+      }
+    }
+
+    .level:nth-of-type(3) {
+      div.number p {
+        align-self: flex-end;
+        padding-bottom: 17px;
+      }
+
+      .quote {
+        display: flex;
+        align-items: flex-end;
+        img {
+          top: 0;
+          bottom: auto;
+        }
+      }
+
+      .icon {
+        grid-column: 2 / 3;
+        padding-left: calc($pd * .6) !important;
+      }
+
+      .copy {
+        grid-column: 3 / 5;
+      }
+    }
+
+  }
+}

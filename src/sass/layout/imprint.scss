@@ -1,0 +1,52 @@
+footer {
+  .columns {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1.5s ease;
+
+    #close-imprint-link {
+      margin-top: 2rem;
+      flex-basis: 100%;
+      @include hidden;
+    }
+
+    &.clicked {
+      transition: all 1.5s ease;
+      max-height: 800em;
+      #close-imprint-link {
+        @include show;
+      }
+    }
+  }
+
+  .imprint-and-privacy {
+    flex-basis: 40%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding-top: 1rem;
+    text-align: left;
+
+    h3 {
+      color: $primary;
+      * + & {
+        margin-top: 2rem;
+      }
+      & + h3 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+
+@include breakpoint($desktop) {
+  footer {
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .imprint-and-privacy {
+      margin: 1rem;
+    }
+  }
+}

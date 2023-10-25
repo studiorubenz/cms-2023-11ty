@@ -1,0 +1,13 @@
+main {
+  p, ul {
+    line-height: 1.4;
+  }
+
+  p.super-headline {
+    line-height: 1.1;
+  }
+
+  p + p, ul + p {
+    margin-top: calc($pm / 2);
+  }
+}

@@ -1,0 +1,74 @@
+#news {
+    a.button {
+      color: black;
+    }
+}
+
+@include breakpoint(0, $mobile) {
+  #news {
+    padding: $bpm $pm $pm $pm;
+
+    a.button {
+      margin-left: $pm;
+      margin-right: $pm;
+    }
+
+    h2 {
+      margin-bottom: 2 * $pm;
+    }
+
+    article {
+      margin-top: $pm;
+      background-color: $gray-97;
+      padding: $pm 0 $pm * 2 0;
+      & > * {
+        padding-left: $pm;
+        padding-right: $pm;
+      }
+
+      img {
+        padding: 0;
+        margin-bottom: $pm;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+@include breakpoint($desktop) {
+  #news {
+    padding: $bpd $pd $pd $pd;
+  }
+
+  .columns {
+    display: flex;
+    margin-left: calc($pd / -2);
+    margin-right: calc($pd / -2);
+  }
+
+  article {
+    overflow: hidden;
+    margin-left: calc($pd / 2);
+    margin-right: calc($pd / 2);
+    background-color: $gray-97;
+    h3  {
+      display: block;
+      height: 2.9rem;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: calc($pd / 2) calc($pd * 0.7 );
+    }
+  }
+
+  img {
+    height: 16rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .copy {
+      padding: $pd calc($pd * 0.7 );
+  }
+
+}

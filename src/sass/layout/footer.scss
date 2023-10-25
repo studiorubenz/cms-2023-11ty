@@ -1,0 +1,31 @@
+footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  line-height: 1.6;
+  color: white;
+  background-color: $bggray;
+
+  a {
+    color: $primary-medium;
+    border: none;
+  }
+
+  div > p:nth-child(1) {
+    font-size: $fontsm-5;
+    line-height: 1;
+  }
+}
+
+
+
+@include breakpoint($desktop) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+
+    div > p:nth-child(1) {
+      font-size: $fontsd-5;
+    }
+  }
+}

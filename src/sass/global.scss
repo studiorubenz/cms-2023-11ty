@@ -1,0 +1,113 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  // background-color: $bgcolor;
+  // color: $copy;
+}
+
+@include breakpoint(0, $mobile) {
+  html {
+    font-size: $fontsm;
+  }
+}
+
+@include breakpoint($desktop) {
+  html {
+    font-size: $fontsd;
+  }
+}
+
+body {
+}
+
+h1, h2, h3 {
+  font-weight: 300;
+  color: $primary;
+}
+
+@include breakpoint(0, $mobile) {
+  h2 {
+    font-size: $fontsm-6;
+    & + * {
+      margin-top: 0.5rem;
+    }
+  }
+
+  h3 {
+    font-size: $fontsm-5;
+    & + * {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+@include breakpoint($desktop) {
+  h2 {
+    font-size: $fontsd-6;
+    & + * {
+      margin-top: 0.75rem;
+    }
+  }
+
+  h3 {
+    font-size: $fontsd-5;
+    & + * {
+      margin-top: 0.7rem;
+    }
+  }
+}
+
+a {
+  display: inline-block;
+  border-bottom: 1px solid $primary;
+  padding-bottom: 0.3rem;
+  text-decoration: none;
+}
+
+strong, em {
+  font-weight: 600;
+}
+
+.super-headline {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.primary {
+  color: $primary;
+}
+
+.maxwidth-container {
+  max-width: rem($max-width);
+  margin: 0 auto;
+}
+
+ul.bullet-list, main ul {
+  list-style: disc;
+  li {
+    margin-left: 1.3rem;
+  }
+}
+
+.button {
+  width: auto;
+  border: 1px solid $primary;
+  margin-top: 1.25rem;
+  padding: rem(12) 2 * $pm;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &:hover {
+    background-color: $primary;
+  }
+}
+
+img {
+  max-width: 100%;
+}

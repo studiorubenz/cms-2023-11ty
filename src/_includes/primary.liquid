@@ -1,0 +1,51 @@
+---
+title: Marcus. G Miller
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ title }}</title>
+        <link rel='stylesheet' href='/style.css'>
+    </head>
+    <body>
+        <header>
+            <h1><a href='/'><em>Marcus G. Miller</em> | Choreographer</a></h1>
+            <nav id='mainnav'>
+                <button id="hamburger" class='closed'>
+                    <span class='line-1'></span>
+                    <span class='line-2'></span>
+                    <span class='line-3'></span>
+                </button>
+                <ul>
+                    <li><a href="#workshops">Workshops</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#news">News</a></li>
+                </ul>
+            </nav>
+            <div class='copy'>
+                <div>
+                    <h2>I believe<span> </span>you can dance.</h2>
+                    <a href="#" class="button">Book Workshop</a>
+                </div>
+            </div>
+        </header>
+        {{ content }}
+        <footer>
+            <div>
+                <p>Thank you for your interest in Art!</p>
+                <p>© 2002 – {{ year }} Marcus G. Miller</p>
+            </div>
+            <a href="#">Imprint & Privacy</a>
+        </footer>
+        <script src='./main.js'></script>
+        <script>
+document.addEventListener("DOMContentLoaded", function(event) {
+    MainNav.init();
+});
+        </script>
+    </body>
+</html>
+
+

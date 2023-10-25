@@ -1,0 +1,59 @@
+#about {
+  background-color: $primary-light;
+
+  a.button {
+    color: black;
+  }
+
+  .col-2 {
+    * { 
+      line-height: 1.75;
+      max-width: 60ch;
+    }
+  }
+}
+
+@include breakpoint(0, $mobile) {
+  #about {
+    padding: $bpm $pm;
+    background-color: $primary-light;
+
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: $pm;
+    }
+  }
+}
+
+@include breakpoint($desktop) {
+  #about {
+    padding: $bpd $pd;
+
+    div.columns {
+      display: flex;
+    }
+
+    div[class^=col-] {
+      flex-basis: 50%;
+    }
+
+    div.col-1 {
+      margin-right: calc($pd / 2);
+      align-self: auto;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    div.col-2 {
+      margin-left: calc($pd / 2);
+      padding: $pd 0;
+    }
+
+    img {
+      margin-bottom: $pd;
+    }
+  }
+}
